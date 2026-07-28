@@ -1,0 +1,148 @@
+ [
+  {
+    "id": 1,
+    "place": "Cox's Bazar",
+    "slug": "coxs-bazar",
+    "country": "Bangladesh",
+    "description": "Relax on the world's longest natural sea beach with golden sands, breathtaking sunsets, and fresh seafood.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "hotels": [
+      {
+        "id": 101,
+        "name": "Sea Pearl Beach Resort",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+        "accommodation": "Deluxe Ocean View Room",
+        "details": "Spacious room with a private balcony overlooking the Bay of Bengal.",
+        "guests": 2,
+        "beds": "1 King Bed",
+        "bathrooms": 1,
+        "features": [
+          "Free WiFi",
+          "Breakfast Included",
+          "Infinity Pool",
+          "Private Beach",
+          "Airport Shuttle"
+        ],
+        "pricePerNight": 120,
+        "rating": 4.8,
+        "reviews": 624
+      },
+      {
+        "id": 102,
+        "name": "Long Beach Hotel",
+        "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+        "accommodation": "Premium Twin Room",
+        "details": "Modern interiors with city and partial sea views.",
+        "guests": 3,
+        "beds": "2 Queen Beds",
+        "bathrooms": 1,
+        "features": [
+          "Gym",
+          "Free Parking",
+          "Restaurant",
+          "Room Service"
+        ],
+        "pricePerNight": 95,
+        "rating": 4.5,
+        "reviews": 481
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "place": "Sreemangal",
+    "slug": "sreemangal",
+    "country": "Bangladesh",
+    "description": "Discover rolling tea gardens, peaceful forests, and the famous seven-layer tea.",
+    "image": "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+    "hotels": [
+      {
+        "id": 201,
+        "name": "Grand Sultan Tea Resort",
+        "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+        "accommodation": "Luxury Garden Suite",
+        "details": "Elegant suite surrounded by lush tea plantations.",
+        "guests": 2,
+        "beds": "1 King Bed",
+        "bathrooms": 1,
+        "features": [
+          "Spa",
+          "Outdoor Pool",
+          "Breakfast",
+          "Nature Walk",
+          "Free WiFi"
+        ],
+        "pricePerNight": 140,
+        "rating": 4.9,
+        "reviews": 512
+      },
+      {
+        "id": 202,
+        "name": "Tea Heaven Resort",
+        "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+        "accommodation": "Standard Cottage",
+        "details": "Cozy wooden cottages nestled among tea gardens.",
+        "guests": 2,
+        "beds": "1 Queen Bed",
+        "bathrooms": 1,
+        "features": [
+          "Garden View",
+          "Restaurant",
+          "Bike Rental",
+          "Free Parking"
+        ],
+        "pricePerNight": 75,
+        "rating": 4.4,
+        "reviews": 233
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "place": "Sundarbans",
+    "slug": "sundarbans",
+    "country": "Bangladesh",
+    "description": "Explore the world's largest mangrove forest, home to the majestic Royal Bengal Tiger.",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "hotels": [
+      {
+        "id": 301,
+        "name": "Mangrove Eco Resort",
+        "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+        "accommodation": "Eco Cottage",
+        "details": "Traditional cottages offering a unique forest experience.",
+        "guests": 2,
+        "beds": "1 Double Bed",
+        "bathrooms": 1,
+        "features": [
+          "Guided Safari",
+          "Breakfast",
+          "River Cruise",
+          "Free WiFi"
+        ],
+        "pricePerNight": 90,
+        "rating": 4.7,
+        "reviews": 318
+      },
+      {
+        "id": 302,
+        "name": "Tiger Point Lodge",
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+        "accommodation": "Family Suite",
+        "details": "Comfortable lodge ideal for families visiting the mangrove forest.",
+        "guests": 4,
+        "beds": "2 Queen Beds",
+        "bathrooms": 2,
+        "features": [
+          "Family Friendly",
+          "Restaurant",
+          "Boat Tour",
+          "Free Parking"
+        ],
+        "pricePerNight": 110,
+        "rating": 4.6,
+        "reviews": 271
+      }
+    ]
+  }
+]
