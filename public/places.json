@@ -1,11 +1,12 @@
- [
+[
   {
     "id": 1,
     "place": "Cox's Bazar",
     "slug": "coxs-bazar",
     "country": "Bangladesh",
     "description": "Relax on the world's longest natural sea beach with golden sands, breathtaking sunsets, and fresh seafood.",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "details": "Cox's Bazar is one of Bangladesh's most iconic tourist destinations, renowned for having the world's longest uninterrupted natural sea beach stretching over 120 kilometers. Visitors can enjoy mesmerizing sunsets, horseback riding along the shore, fresh seafood, beachside cafés, and exciting water sports. Popular nearby attractions include Himchari National Park, Inani Beach, Marine Drive, and Saint Martin's Island. Whether you're looking for a peaceful escape or an adventurous vacation, Cox's Bazar offers an unforgettable coastal experience for families, couples, and solo travelers alike.",
+    "image": "https://i.ibb.co.com/9m4sZ3V4/Rectangle-1.png",
     "hotels": [
       {
         "id": 101,
@@ -36,12 +37,7 @@
         "guests": 3,
         "beds": "2 Queen Beds",
         "bathrooms": 1,
-        "features": [
-          "Gym",
-          "Free Parking",
-          "Restaurant",
-          "Room Service"
-        ],
+        "features": ["Gym", "Free Parking", "Restaurant", "Room Service"],
         "pricePerNight": 95,
         "rating": 4.5,
         "reviews": 481
@@ -54,7 +50,8 @@
     "slug": "sreemangal",
     "country": "Bangladesh",
     "description": "Discover rolling tea gardens, peaceful forests, and the famous seven-layer tea.",
-    "image": "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+    "details": "Known as the Tea Capital of Bangladesh, Sreemangal is a paradise for nature lovers. The region is covered with rolling green tea estates, lemon orchards, and tropical forests that create a peaceful atmosphere throughout the year. Visitors can explore Lawachara National Park, experience wildlife such as hoolock gibbons, cycle through scenic tea gardens, and taste the world-famous seven-layer tea. Sreemangal is the perfect destination for those seeking tranquility, photography opportunities, and eco-tourism experiences.",
+    "image": "https://i.ibb.co.com/zV01JJBQ/Chat-GPT-Image-Jul-29-2026-02-46-09-AM.png",
     "hotels": [
       {
         "id": 201,
@@ -103,7 +100,8 @@
     "slug": "sundarbans",
     "country": "Bangladesh",
     "description": "Explore the world's largest mangrove forest, home to the majestic Royal Bengal Tiger.",
-    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "details": "The Sundarbans is a UNESCO World Heritage Site and the largest mangrove forest on Earth. Spanning thousands of square kilometers across Bangladesh and India, it is home to the majestic Royal Bengal Tiger, spotted deer, crocodiles, dolphins, and hundreds of bird species. Visitors typically explore the forest by boat, navigating through winding rivers and narrow canals surrounded by dense mangrove trees. Guided wildlife tours, birdwatching, and breathtaking natural scenery make the Sundarbans one of South Asia's most unique adventure destinations.",
+    "image": "https://i.ibb.co.com/Q0NXgVP/Chat-GPT-Image-Jul-29-2026-02-48-07-AM.png",
     "hotels": [
       {
         "id": 301,
@@ -114,12 +112,7 @@
         "guests": 2,
         "beds": "1 Double Bed",
         "bathrooms": 1,
-        "features": [
-          "Guided Safari",
-          "Breakfast",
-          "River Cruise",
-          "Free WiFi"
-        ],
+        "features": ["Guided Safari", "Breakfast", "River Cruise", "Free WiFi"],
         "pricePerNight": 90,
         "rating": 4.7,
         "reviews": 318
@@ -144,5 +137,56 @@
         "reviews": 271
       }
     ]
-  }
+  },
+  {
+  "id": 4,
+  "place": "Sajek Valley",
+  "slug": "sajek-valley",
+  "country": "Bangladesh",
+  "description": "Wake up above the clouds in Bangladesh's most breathtaking hill destination.",
+  "details": "Nestled in the Rangamati district within the Chittagong Hill Tracts, Sajek Valley is one of Bangladesh's most picturesque tourist destinations. Known as the 'Queen of Hills,' Sajek offers panoramic views of rolling green mountains, floating clouds, and stunning sunrises that leave visitors mesmerized. Travelers can explore Konglak Hill, experience the rich culture of the indigenous Chakma and Lusai communities, enjoy scenic jeep rides through winding mountain roads, and relax amidst the cool, refreshing climate. Whether you're seeking adventure, photography, or a peaceful retreat in nature, Sajek Valley provides an unforgettable escape from the bustle of city life.",
+  "image": "https://i.ibb.co.com/bg9bCLh9/Chat-GPT-Image-Jul-29-2026-02-31-57-AM.png",
+  "hotels": [
+    {
+      "id": 401,
+      "name": "Sajek Resort",
+      "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+      "accommodation": "Premium Hill View Cottage",
+      "details": "A cozy wooden cottage featuring breathtaking views of the surrounding hills and clouds from a private balcony.",
+      "guests": 2,
+      "beds": "1 King Bed",
+      "bathrooms": 1,
+      "features": [
+        "Hill View",
+        "Free Breakfast",
+        "Private Balcony",
+        "Restaurant",
+        "Free Parking"
+      ],
+      "pricePerNight": 105,
+      "rating": 4.8,
+      "reviews": 487
+    },
+    {
+      "id": 402,
+      "name": "Megh Machang Resort",
+      "image": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8",
+      "accommodation": "Deluxe Family Cabin",
+      "details": "Spacious family cabin with modern amenities and spectacular sunrise views over the mountains.",
+      "guests": 4,
+      "beds": "2 Queen Beds",
+      "bathrooms": 2,
+      "features": [
+        "Mountain View",
+        "Family Friendly",
+        "Free WiFi",
+        "Restaurant",
+        "Bonfire Area"
+      ],
+      "pricePerNight": 125,
+      "rating": 4.7,
+      "reviews": 362
+    }
+  ]
+}
 ]
