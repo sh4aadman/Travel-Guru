@@ -16,13 +16,13 @@ function Home() {
     <>
       <section
         style={{ backgroundImage: `url(${active.image})` }}
-        className="fixed inset-0 -z-10 bg-cover bg-center transition-all duration-500 ease-in-out opacity-80"
+        className="fixed inset-0 -z-10 bg-cover bg-center ease-in opacity-80"
       />
 
       <section
         style={{
           background:
-            "linear-gradient(to top right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.1) 100%)",
+            "linear-gradient(to bottom, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.75) 65%, rgba(0,0,0,0.55) 85%)",
         }}
         className="fixed inset-0 -z-10 pointer-events-none"
       />
@@ -33,7 +33,7 @@ function Home() {
             <TextArea heading={active.place} description={active.description} />
           </section>
           <section className="col-span-8">
-            <Carousel pictures={pictures} />
+            <Carousel pictures={pictures} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
           </section>
         </section>
       </section>
