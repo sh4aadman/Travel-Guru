@@ -15,7 +15,7 @@ function Navbar() {
           {links}
         </ul>
         <NavLink to={"/auth/login"}>
-          <button className="px-7.5 py-3 font-secondary font-medium text-accent rounded-sm bg-secondary">
+          <button className="px-7.5 py-3 font-secondary font-medium text-accent rounded-sm bg-secondary cursor-pointer hover:bg-primary hover:text-accent">
             Login
           </button>
         </NavLink>
