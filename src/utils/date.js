@@ -1,3 +1,3 @@
-const today = new Date();
+const date = new Date();
 
-export default today;
+export default date;

@@ -1,13 +1,27 @@
 import { useLoaderData, useParams } from "react-router";
 import TextArea from "../../components/ui/Text Area/TextArea";
-import { format } from "date-fns";
-import today from "../../utils/date";
+import { addDays, format } from "date-fns";
+import date from "../../utils/date";
+import { useState } from "react";
+import DatePicker from "../../components/ui/Date Picker/DatePicker";
 
 function Booking() {
   const places = useLoaderData();
   const { slug } = useParams();
 
+  const tomorrow = addDays(date, 1);
+
+  const [fromDate, setFromDate] = useState(date);
+  const [toDate, setToDate] = useState(tomorrow);
+
   const destination = places.find((place) => place.slug === slug);
+
+  const handleFromChange = (selected) => {
+    setFromDate(selected);
+    if (toDate <= selected) {
+      setToDate(addDays(selected, 1));
+    }
+  };
 
   return (
     <>
@@ -40,8 +54,8 @@ function Booking() {
                   <input
                     className="p-5 bg-neutral-content rounded-sm font-secondary font-bold placeholder:text-accent"
                     type="text"
-                    name=""
-                    id=""
+                    name="origin"
+                    id="origin"
                     placeholder="Dhaka"
                   />
                 </section>
@@ -52,38 +66,29 @@ function Booking() {
                   <input
                     className="p-5 bg-neutral-content rounded-sm font-secondary font-bold placeholder:text-accent"
                     type="text"
-                    name=""
-                    id=""
+                    name="destination"
+                    id="destination"
                     placeholder={destination.place}
                   />
                 </section>
                 <section className="flex gap-4">
-                  <section className="w-1/2 flex flex-col gap-1">
-                    <label className="font-secondary font-medium text-neutral">
-                      From
-                    </label>
-                    <input
-                      className="p-5 bg-neutral-content rounded-sm font-secondary font-bold placeholder:text-accent"
-                      type="text"
-                      name=""
-                      id=""
-                      // placeholder={format(today), "dd/MM"}
-                    />
-                  </section>
-                  <section className="w-1/2 flex flex-col gap-1">
-                    <label className="font-secondary font-medium text-neutral">
-                      To
-                    </label>
-                    <input
-                      className="p-5 bg-neutral-content rounded-sm font-secondary font-bold placeholder:text-accent"
-                      type="text"
-                      name=""
-                      id=""
-                    />
-                  </section>
+                  <DatePicker
+                    label="From"
+                    value={fromDate}
+                    onChange={handleFromChange}
+                    minDate={date}
+                    placeholder={format(date, "dd/MM")}
+                  />
+                  <DatePicker
+                    label="To"
+                    value={toDate}
+                    onChange={setToDate}
+                    minDate={addDays(fromDate, 1)}
+                    placeholder={format(tomorrow, "dd/MM")}
+                  />
                 </section>
                 <button
-                  className="py-5 font-secondary text-accent font-medium bg-secondary rounded-sm"
+                  className="py-5 font-secondary text-accent font-medium bg-secondary rounded-sm cursor-pointer hover:bg-accent hover:text-primary"
                   type="submit"
                 >
                   Start Booking
