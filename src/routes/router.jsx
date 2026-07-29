@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router";
 import MainLayout from "../layouts/Main Layout/MainLayout";
 import Home from "../pages/Home/Home";
-import Place from "../pages/Places/Place";
+import Booking from "../pages/Booking/Booking";
 import Loading from "../components/common/Loading/Loading";
 
 const router = createBrowserRouter([
@@ -16,12 +16,14 @@ const router = createBrowserRouter([
         hydrateFallbackElement: <Loading />,
       },
       {
-        path: "/places",
-        element: <Navigate to={"/places/coxs-bazar"} />,
+        path: "/booking",
+        element: <Navigate to={"/"} />,
       },
       {
-        path: "/places/:slug",
-        Component: Place,
+        path: "/booking/:slug",
+        Component: Booking,
+        loader: () => fetch("/places.json"),
+        hydrateFallbackElement: <Loading />,
       },
     ],
   },

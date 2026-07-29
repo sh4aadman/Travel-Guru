@@ -12,6 +12,8 @@
     --color-primary: #FFFFFF;
     --color-secondary: #F9A51A;
     --color-accent: #000000;
+    --color-neutral: #818181;
+    --color-neutral-content: #F2F2F2;
 }
 
 .font-primary {

@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import Carousel from "../../components/ui/Carousel/Carousel";
 import TextArea from "../../components/ui/Text Area/TextArea";
 import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -9,6 +10,7 @@ function Home() {
   const places = useLoaderData();
 
   const active = places[activeIndex];
+  const slug = places[activeIndex].slug;
 
   const pictures = places.map((place) => place.image);
 
@@ -31,9 +33,18 @@ function Home() {
         <section className="grid grid-cols-12 gap-12">
           <section className="mt-10 col-span-4">
             <TextArea heading={active.place} description={active.description} />
+            <Link to={`/booking/${slug}`}>
+              <button className="px-7.5 py-3 mt-7 font-secondary font-medium text-accent rounded-sm bg-secondary flex items-center gap-2.5 cursor-pointer hover:bg-primary hover:text-accent">
+                Booking <FaArrowRightLong className="text-lg" />
+              </button>
+            </Link>
           </section>
           <section className="col-span-8">
-            <Carousel pictures={pictures} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+            <Carousel
+              pictures={pictures}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
           </section>
         </section>
       </section>
