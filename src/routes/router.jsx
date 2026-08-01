@@ -6,6 +6,7 @@ import Loading from "../components/common/Loading/Loading";
 import AuthLayout from "../layouts/Auth Layout/AuthLayout";
 import Login from "../pages/Auth/Login/Login";
 import Register from "../pages/Auth/Register/Register";
+import Hotels from "../pages/Hotels/Hotels";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
       {
         path: "/booking/:slug",
         Component: Booking,
+        loader: () => fetch("/places.json"),
+        hydrateFallbackElement: <Loading />,
+      },
+      {
+        path: "/booking/:slug/hotels",
+        Component: Hotels,
         loader: () => fetch("/places.json"),
         hydrateFallbackElement: <Loading />,
       },

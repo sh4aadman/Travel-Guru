@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useParams } from "react-router";
 import TextArea from "../../components/ui/Text Area/TextArea";
 import { addDays, format } from "date-fns";
 import date from "../../utils/date";
@@ -46,7 +46,7 @@ function Booking() {
           </section>
           <section className="col-span-6">
             <form className="w-full p-6 bg-primary rounded-sm">
-              <fieldset className="flex flex-col gap-5">
+              <fieldset className="w-full flex flex-col gap-5">
                 <section className="flex flex-col gap-2">
                   <label className="font-secondary font-medium text-neutral">
                     Origin
@@ -87,12 +87,14 @@ function Booking() {
                     placeholder={format(tomorrow, "dd/MM")}
                   />
                 </section>
-                <button
-                  className="py-5 font-secondary text-accent font-medium bg-secondary rounded-sm cursor-pointer hover:bg-accent hover:text-primary"
-                  type="submit"
-                >
-                  Start Booking
-                </button>
+                <Link className="block" to={`/booking/${slug}/hotels`}>
+                  <button
+                    className="py-5 w-full font-secondary text-accent font-medium bg-secondary rounded-sm cursor-pointer hover:bg-accent hover:text-primary"
+                    type="submit"
+                  >
+                    Start Booking
+                  </button>
+                </Link>
               </fieldset>
             </form>
           </section>

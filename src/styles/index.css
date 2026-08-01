@@ -16,7 +16,10 @@
     --color-neutral: #818181;
     --color-neutral-content: #F2F2F2;
     --color-base-100: #AAAAAA;
+    --color-base-200: #D1D1D1;
+    --color-base-300: #2B2B2B;
     --color-base-content: #ABABAB;
+    --color-info-content: #6A6A6A;
 }
 
 .font-primary {
