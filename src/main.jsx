@@ -5,9 +5,12 @@ import router from "./routes/router.jsx";
 import "@daypicker/react/style.css";
 import "./styles/index.css";
 import "leaflet/dist/leaflet.css";
+import AuthProvider from "./context/AuthContext/AuthProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </StrictMode>,
 );
