@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router";
 import router from "./routes/router.jsx";
 import "@daypicker/react/style.css";
 import "./styles/index.css";
+import "leaflet/dist/leaflet.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

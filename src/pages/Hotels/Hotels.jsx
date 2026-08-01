@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { FaStar } from "react-icons/fa";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useLoaderData, useOutletContext, useParams } from "react-router";
 
 function Hotels() {
@@ -8,6 +10,12 @@ function Hotels() {
   const { slug } = useParams();
 
   const destination = data.find((item) => item.slug === slug);
+
+  const destinationCenter = [
+    destination.location.latitude,
+    destination.location.longitude,
+  ];
+
   const hotels = destination.hotels;
 
   const numberOfGuests = 2;
@@ -54,9 +62,14 @@ function Hotels() {
                       <p key={idx}>{feature}</p>
                     ))}
                   </section>
-                  <section className="mt-3 font-secondary font-bold text-sm text-accent flex items-center gap-7">
-                    <p>{hotel.rating}</p>
-                    <p>{hotel.pricePerNight}/Night</p>
+                  <section className="mt-3 font-secondary flex items-center gap-7">
+                    <p className="font-medium text-sm text-accent flex items-center gap-1">
+                      <FaStar className="text-secondary" /> {hotel.rating}
+                    </p>
+                    <p className="font-medium text-lg text-accent">
+                      ${hotel.pricePerNight}
+                      <span className="font-thin">/Night</span>
+                    </p>
                     <p>Total</p>
                   </section>
                 </section>
@@ -64,7 +77,36 @@ function Hotels() {
             ))}
           </section>
         </section>
-        <section className="col-span-6">map</section>
+        <section className="col-span-6">
+          <MapContainer
+            center={destinationCenter}
+            zoom={11}
+            scrollWheelZoom={true}
+            className="w-full h-[calc(100vh-200px)] rounded-sm"
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {hotels.map((hotel) => (
+              <Marker
+                key={hotel.id}
+                position={[hotel.location.latitude, hotel.location.longitude]}
+              >
+                <Popup>
+                  <div className="space-y-1">
+                    <h3 className="font-bold font-secondary text-accent">
+                      {hotel.name}
+                    </h3>
+                    <p className="font-medium font-secondary text-accent text-sm">
+                      ${hotel.pricePerNight} / night
+                    </p>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </section>
       </section>
     </section>
   );
