@@ -1,13 +1,14 @@
-import { Link, useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useOutletContext, useParams } from "react-router";
 import TextArea from "../../components/ui/Text Area/TextArea";
-import { addDays, format } from "date-fns";
+import { addDays, differenceInCalendarDays, format } from "date-fns";
 import date from "../../utils/date";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DatePicker from "../../components/ui/Date Picker/DatePicker";
 
 function Booking() {
   const places = useLoaderData();
   const { slug } = useParams();
+  const { setDateRange } = useOutletContext();
 
   const tomorrow = addDays(date, 1);
 
@@ -22,6 +23,12 @@ function Booking() {
       setToDate(addDays(selected, 1));
     }
   };
+
+  const days = differenceInCalendarDays(toDate, fromDate);
+
+  useEffect(() => {
+    setDateRange(days);
+  }, [setDateRange, days]);
 
   return (
     <>

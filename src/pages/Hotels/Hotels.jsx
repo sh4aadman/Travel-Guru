@@ -4,7 +4,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useLoaderData, useOutletContext, useParams } from "react-router";
 
 function Hotels() {
-  const { setShowSearch, setMain } = useOutletContext();
+  const { setShowSearch, setMain, dateRange } = useOutletContext();
 
   const data = useLoaderData();
   const { slug } = useParams();
@@ -32,7 +32,7 @@ function Hotels() {
       <section className="grid grid-cols-12">
         <section className="col-span-6">
           <section className="font-secondary text-base-300 flex items-center gap-4">
-            <p>Date</p>
+            <p>{dateRange} Days</p>
             <p>{numberOfGuests} Guests</p>
           </section>
           <h2 className="mt-2 font-secondary font-bold text-2xl text-accent">
@@ -40,10 +40,10 @@ function Hotels() {
           </h2>
           <section className="mt-8 space-y-10">
             {hotels.map((hotel) => (
-              <section key={hotel.id} className="flex items-center gap-8">
+              <section key={hotel.id} className="flex items-stretch gap-8">
                 <figure className="w-2/5">
                   <img
-                    className="object-cover rounded-sm"
+                    className="aspect-video object-cover rounded-sm"
                     src={hotel.image}
                     alt={`image-of-${hotel.name}`}
                   />
@@ -70,7 +70,7 @@ function Hotels() {
                       ${hotel.pricePerNight}
                       <span className="font-thin">/Night</span>
                     </p>
-                    <p>Total</p>
+                    <p>${parseInt(hotel.pricePerNight) * dateRange} Total</p>
                   </section>
                 </section>
               </section>

@@ -38,7 +38,7 @@ function DatePicker({ label, value, onChange, minDate, placeholder }) {
       <label className="font-secondary font-medium text-neutral">{label}</label>
       <section className="relative flex items-center gap-4" ref={containerRef}>
         <input
-          className="grow p-5 bg-neutral-content rounded-sm font-secondary font-bold placeholder:text-accent cursor-pointer"
+          className="grow p-5 bg-neutral-content rounded-sm font-secondary font-bold text-accent placeholder:text-accent cursor-pointer"
           type="text"
           readOnly
           onClick={() => setOpen((o) => !o)}
